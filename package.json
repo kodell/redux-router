@@ -1,6 +1,6 @@
 {
-  "name": "@saltspill/redux-router",
-  "version": "2.1.2",
+  "name": "@boxfoot/redux-router",
+  "version": "2.2.1",
   "description": "Redux bindings for React Router — keep your router state inside your Redux Store.",
   "main": "lib/index.js",
   "scripts": {
@@ -11,8 +11,7 @@
     "clean": "rimraf lib && rimraf dist && rimraf server.js",
     "lint": "eslint src",
     "test": "mocha --compilers js:babel/register --recursive --require src/__tests__/init.js src/**/*-test.js",
-    "test-watch": "mocha --compilers js:babel/register --recursive --require src/__tests__/init.js -w src/**/*-test.js",
-    "prepublish": "npm run clean && mkdir dist && npm run build"
+    "test-watch": "mocha --compilers js:babel/register --recursive --require src/__tests__/init.js -w src/**/*-test.js"
   },
   "repository": {
     "type": "git",
