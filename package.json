@@ -1,6 +1,6 @@
 {
   "name": "@boxfoot/redux-router",
-  "version": "2.2.2-1",
+  "version": "3.0.0-0",
   "description": "Redux bindings for React Router — keep your router state inside your Redux Store.",
   "main": "lib/index.js",
   "scripts": {
