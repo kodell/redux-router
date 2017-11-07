@@ -92,7 +92,11 @@ class ReduxRouter extends Component {
 class ReduxRouterContext extends Component {
   static propTypes = {
     location: PropTypes.object,
-    RoutingContext: PropTypes.func
+    RoutingContext: PropTypes.func,
+
+    params: PropTypes.any,
+    routes: PropTypes.any,
+    router: PropTypes.any
   }
 
   render() {
@@ -101,6 +105,10 @@ class ReduxRouterContext extends Component {
     if (location === null || location === undefined) {
       return null; // Async matching
     }
+
+    // react-router@3 expects props to be available on Router object
+    const { params, routes } = this.props;
+    Object.assign(this.props.router, { params, location, routes });
 
     const RoutingContext = this.props.RoutingContext || DefaultRoutingContext;
 
